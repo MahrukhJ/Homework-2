@@ -69,4 +69,6 @@ sim_rolls <- sample(1:6, how_many_rolls, replace = TRUE)
 
 This command will take 20 draws from integers 1-6 and the "replace = TRUE" command repalces the integers (the metaphor is not quite rolling dice, but as if there were 6 balls in a jar, labeled with a number, and it picks a ball from the jar 20 times), the replace command, returns the integers. 
 Alongside, creating the 'sim_rolls' variable makes it easy to go back and change something and have that propagate throughout the rest of the program. 
+how_many_rolls <- 20
+sim_rolls <- sample(1:6, how_many_rolls, replace = TRUE)
 
