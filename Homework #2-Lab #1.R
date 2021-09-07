@@ -101,3 +101,4 @@ if_come_up_6_vec <- as.numeric(sim_rolls_vec == 6)
 mean(if_come_up_6_vec)
 [1] 0.153
 
+if_come_up_6 <- (lots_of_sim_rolls == 6)
