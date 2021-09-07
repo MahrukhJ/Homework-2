@@ -60,5 +60,13 @@ Confidence from conclusions is a result of trust in the math and personal judgem
 #Note that while previous Possible Protocols emphasized counting just the number of times a 6 came up, you might consider other outcomes such as the average value of the dice when rolled or the distribution of other outcomes (what number is on opposite face from 6? Do you suppose that number might be disproportionately represented if dice were not fair?).
 It certainly is a point of interest to record and analyze all values of the rolls and specifically observe the mode and the frequency of 1 (giving importance to 1 since it is the opposite face from 6 and if the rolls generate an unusual number of 1s, an explanation can be constructed). 
 
+Time to use R! 
                                                                                                                                             
+Now we will have the computer roll dice. We can use the following command:
                                                                                                                                             
+how_many_rolls <- 20
+sim_rolls <- sample(1:6, how_many_rolls, replace = TRUE)
+
+This command will take 20 draws from integers 1-6 and the "replace = TRUE" command repalces the integers (the metaphor is not quite rolling dice, but as if there were 6 balls in a jar, labeled with a number, and it picks a ball from the jar 20 times), the replace command, returns the integers. 
+Alongside, creating the 'sim_rolls' variable makes it easy to go back and change something and have that propagate throughout the rest of the program. 
+
