@@ -102,3 +102,7 @@ mean(if_come_up_6_vec)
 [1] 0.153
 
 if_come_up_6 <- (lots_of_sim_rolls == 6)
+                                                                                                          
+The command above, although similar, is different from the previous command because it omits the 'as.numeric' component. Doing so, generates a list of values, either TRUE or FALSE . 
+
+Interestingly, the average values of these 2 versions, matrix or vector, are going to be different, due to randomization. However, increasing 'how_many_sims' will drive the 2 averages closer. 
