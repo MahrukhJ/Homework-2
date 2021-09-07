@@ -95,4 +95,9 @@ We can also observe how many times a 6 came up:
 
 if_come_up_6 <- as.numeric(lots_of_sim_rolls == 6)
 mean(if_come_up_6)
+[1] 0.173
+
+if_come_up_6_vec <- as.numeric(sim_rolls_vec == 6)
+mean(if_come_up_6_vec)
+[1] 0.153
 
