@@ -72,3 +72,27 @@ Alongside, creating the 'sim_rolls' variable makes it easy to go back and change
 how_many_rolls <- 20
 sim_rolls <- sample(1:6, how_many_rolls, replace = TRUE)
 
+This will give us 1 version of "Experiment Protocol #2". However, one way to draw a better sense of the range of outcomes is to use a loop. For instance: 
+
+# for first time
+lots_of_sim_rolls <- sample(1:6,how_many_rolls, replace = TRUE)
+
+# do 49 more simulations
+for (indx in 1:49) {
+  sim_rolls <- sample(1:6,how_many_rolls, replace = TRUE)
+  lots_of_sim_rolls <- data.frame(lots_of_sim_rolls,sim_rolls)
+  }
+
+This command will create a data frame of 50 variables, one for each simulation where each simulation incorporates 20 rolls.
+
+Instead of using a loop (which can slow down your program!), we can also create one big vector!
+
+how_many_sims <- 50
+sim_rolls_vec <- sample(1:6,(how_many_rolls*how_many_sims), replace = TRUE) # vectorized version
+
+With this command, you just have to keep track that the first 20 observations are for the first simulation, the next 20 for the second, etc. 
+We can also observe how many times a 6 came up:
+
+if_come_up_6 <- as.numeric(lots_of_sim_rolls == 6)
+mean(if_come_up_6)
+
